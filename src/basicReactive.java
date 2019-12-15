@@ -43,7 +43,7 @@ public class basicReactive {
 
     void startBehavior()  {
     	
-    	boolean synchron = true;
+    	boolean synchron = false;
     	
         EPuckVRep epuck = new EPuckVRep("ePuck","127.0.0.1",19999, synchron);
         
@@ -60,7 +60,7 @@ public class basicReactive {
             	epuck.startsim();
             int stepCounter = 0;
 
-            //CameraImage image = new CameraImage(resolX,resolY);
+            CameraImage image = new CameraImage(resolX,resolY);
 
             while(epuck.isConnected()) {
                 stepCounter += 1;
